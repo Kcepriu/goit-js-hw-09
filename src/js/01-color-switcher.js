@@ -9,10 +9,6 @@ class ChangeColor {
   constructor() {
     this.refs = this.findeElementWindow();
 
-    this.addEventsFromButtom();
-
-    this.setStartStatus();
-
     this.intervalId = null;
   }
 
@@ -101,6 +97,13 @@ class ChangeColor {
   setColorBody(color) {
     this.refs.body.style.backgroundColor = color;
   }
+
+  startScript() {
+    this.addEventsFromButtom();
+
+    this.setStartStatus();
+  }
 }
 
 const changeColor = new ChangeColor();
+changeColor.startScript();
